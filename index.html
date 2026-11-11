@@ -38,7 +38,7 @@
   <link rel="icon" href="https://novalis-lab.github.io/icon.svg" type="image/svg+xml">
   <link rel="icon" href="https://novalis-lab.github.io/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="https://novalis-lab.github.io/apple-touch-icon.png">
-  <meta name="theme-color" content="#07080f">
+  <meta name="theme-color" content="#0b0b0d">
   <!-- フォント（トップページと同じ Google Fonts・無料） -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,18 +48,18 @@
        色やフォント（トップページ novalis-lab.github.io と共通）
        ============================================================ */
     :root {
-      --bg: #07080f;
-      --text: #f1f2f8;
-      --muted: #9097b0;
-      --dim: #5b6078;
-      --line: rgba(255, 255, 255, 0.09);
-      --card: rgba(255, 255, 255, 0.04);
-      --field: rgba(7, 8, 15, 0.6);
-      --main: #7c6cff;        /* むらさき */
-      --sub: #22d3ee;         /* 水色 */
-      --hot: #ff5ea8;         /* ピンク */
-      --hw: var(--sub);       /* 高速＝水色 */
-      --lr: var(--hot);       /* 下道＝ピンク */
+      --bg: #0b0b0d;          /* ほぼ黒 */
+      --text: #f2f0ea;
+      --muted: #8b8a86;
+      --dim: #5d5c58;
+      --line: rgba(255, 255, 255, 0.12);
+      --card: rgba(255, 255, 255, 0.035);
+      --field: rgba(11, 11, 13, 0.6);
+      --main: #6f9fd4;        /* 落ち着いた青（トップページの差し色） */
+      --sub: #8fb6e2;         /* 明るめの青 */
+      --hot: #d4a06a;         /* アンバー（琥珀色） */
+      --hw: var(--main);      /* 高速＝青 */
+      --lr: var(--hot);       /* 下道＝アンバー */
       --font: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", Meiryo, sans-serif;
       --font-en: "Unbounded", "Zen Kaku Gothic New", sans-serif;
     }
@@ -163,7 +163,7 @@
       letter-spacing: 0.2em;
       color: var(--muted);
     }
-    .dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 10px #4ade80; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: #6f9fd4; box-shadow: 0 0 10px #6f9fd4; }
     .hero h1 { margin: 0; line-height: 1.2; }
     .vs-line {
       display: flex;
@@ -174,8 +174,8 @@
       font-weight: 900;
       letter-spacing: 0.04em;
     }
-    .vs-line .hw-word { color: var(--hw); text-shadow: 0 0 28px rgba(34, 211, 238, 0.45); }
-    .vs-line .lr-word { color: var(--lr); text-shadow: 0 0 28px rgba(255, 94, 168, 0.45); }
+    .vs-line .hw-word { color: var(--hw); text-shadow: 0 0 28px rgba(111, 159, 212, 0.45); }
+    .vs-line .lr-word { color: var(--lr); text-shadow: 0 0 28px rgba(212, 160, 106, 0.45); }
     .vs-line .vs {
       font-family: var(--font-en);
       font-weight: 800;
@@ -301,7 +301,7 @@
       font-weight: 500;
       font-size: 1.2rem;   /* 16px以上でiOSのズームを防ぐ */
     }
-    .unit-input input::placeholder { color: #3d4259; font-family: var(--font); font-size: 1.05rem; }
+    .unit-input input::placeholder { color: #5d5c58; font-family: var(--font); font-size: 1.05rem; }
     .unit-input span { color: var(--muted); font-size: 0.85rem; font-weight: 700; white-space: nowrap; padding-left: 6px; }
     .note { margin: 10px 0 0; font-size: 0.76rem; color: var(--dim); line-height: 1.6; }
     .lookup-link {
@@ -350,11 +350,11 @@
       font-size: 1.4rem;
       font-weight: 900;
       color: #fff;
-      background: linear-gradient(110deg, #3b3f63, #2a2d48);
+      background: linear-gradient(110deg, #2c2c33, #1c1c21);
     }
-    .verdict.hw { background: linear-gradient(110deg, #0e9fb8, var(--main)); box-shadow: 0 14px 40px -14px var(--sub); }
-    .verdict.lr { background: linear-gradient(110deg, var(--main), #e0408c); box-shadow: 0 14px 40px -14px var(--hot); }
-    .verdict.mid { background: linear-gradient(110deg, #0e9fb8, var(--main), #e0408c); box-shadow: 0 14px 40px -14px var(--main); }
+    .verdict.hw { background: linear-gradient(110deg, #2f5683, #44709f); box-shadow: 0 14px 40px -14px var(--sub); }
+    .verdict.lr { background: linear-gradient(110deg, #44709f, #8a5e33); box-shadow: 0 14px 40px -14px var(--hot); }
+    .verdict.mid { background: linear-gradient(110deg, #2f5683, #44709f, #8a5e33); box-shadow: 0 14px 40px -14px var(--main); }
     .verdict::after {
       content: "";
       position: absolute;
@@ -396,8 +396,8 @@
       font-variant-numeric: tabular-nums;
     }
     .diff-big .u { font-family: var(--font); font-size: 0.55em; font-weight: 900; margin-left: 1px; }
-    .diff-big.hw { color: var(--hw); text-shadow: 0 0 20px rgba(34, 211, 238, 0.4); }
-    .diff-big.lr { color: var(--lr); text-shadow: 0 0 20px rgba(255, 94, 168, 0.4); }
+    .diff-big.hw { color: var(--hw); text-shadow: 0 0 20px rgba(111, 159, 212, 0.4); }
+    .diff-big.lr { color: var(--lr); text-shadow: 0 0 20px rgba(212, 160, 106, 0.4); }
     .diff-text { font-size: 0.8rem; font-weight: 700; }
 
     /* 高速・下道を左右に並べる */
@@ -451,7 +451,7 @@
     .track { display: flex; height: 12px; border-radius: 999px; background: rgba(255,255,255,0.06); overflow: hidden; }
     .seg { height: 100%; width: 0; transition: width .6s cubic-bezier(.2,.8,.2,1); }
     .seg.hw-fuel { background: var(--hw); }
-    .seg.hw-toll { background: repeating-linear-gradient(135deg, #0e8aa0 0 5px, #16b6d1 5px 10px); }
+    .seg.hw-toll { background: repeating-linear-gradient(135deg, #4f7fb8 0 5px, #7ea9da 5px 10px); }
     .seg.lr-fuel { background: var(--lr); }
     .seg.hw-time { background: linear-gradient(90deg, var(--main), var(--hw)); border-radius: 999px; }
     .seg.lr-time { background: linear-gradient(90deg, var(--main), var(--lr)); border-radius: 999px; }
@@ -525,7 +525,7 @@
       font-size: 0.95rem;
       font-weight: 700;
       text-decoration: none;
-      box-shadow: 0 10px 30px -8px rgba(124, 108, 255, 0.7);
+      box-shadow: 0 10px 30px -8px rgba(111, 159, 212, 0.7);
       transition: transform .2s;
     }
     .footer-home:hover { transform: translateY(-2px); }
@@ -564,10 +564,10 @@
         <svg viewBox="0 0 512 512" aria-hidden="true">
           <defs>
             <linearGradient id="lg" gradientUnits="userSpaceOnUse" x1="150" y1="110" x2="380" y2="400">
-              <stop offset="0" stop-color="#22d3ee"/><stop offset="0.55" stop-color="#7c6cff"/><stop offset="1" stop-color="#ff5ea8"/>
+              <stop offset="0" stop-color="#8fb6e2"/><stop offset="0.55" stop-color="#6f9fd4"/><stop offset="1" stop-color="#d4a06a"/>
             </linearGradient>
           </defs>
-          <rect width="512" height="512" rx="112" fill="#0b0c18" stroke="rgba(255,255,255,0.15)" stroke-width="8"/>
+          <rect width="512" height="512" rx="112" fill="#0b0b0d" stroke="rgba(255,255,255,0.15)" stroke-width="8"/>
           <path d="M164 370 V158 L348 362 V254" fill="none" stroke="url(#lg)" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M352 82 C358 124 370 136 412 146 C370 156 358 168 352 210 C346 168 334 156 292 146 C334 136 346 124 352 82 Z" fill="#ffffff"/>
         </svg>
@@ -691,7 +691,7 @@
 
         <div class="bars" aria-hidden="true">
           <div class="bar-group">
-            <div class="bar-title"><span>費用</span><span class="legend"><span><i style="background:var(--hw)"></i>燃料代</span><span><i style="background:repeating-linear-gradient(135deg,#0e8aa0 0 3px,#16b6d1 3px 6px)"></i>高速料金</span></span></div>
+            <div class="bar-title"><span>費用</span><span class="legend"><span><i style="background:var(--hw)"></i>燃料代</span><span><i style="background:repeating-linear-gradient(135deg,#4f7fb8 0 3px,#7ea9da 3px 6px)"></i>高速料金</span></span></div>
             <div class="bar-row"><span class="hw">高速</span><div class="track"><div class="seg hw-fuel" id="b-hw-fuel"></div><div class="seg hw-toll" id="b-hw-toll"></div></div></div>
             <div class="bar-row"><span class="lr">下道</span><div class="track"><div class="seg lr-fuel" id="b-lr-fuel"></div></div></div>
           </div>
